@@ -1,0 +1,37 @@
+#bar {
+    margin: 0px; /* affects top/bottom & left/right alignment */
+    font-size: 16px;
+    font-family: Product Sans;
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    color:#ccbbff;
+}
+
+button {
+    padding-top: 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: rgba (200,140,255,0.5);
+    padding: 20px;
+    margin: 2px;
+}
+
+button:focus {
+    background-color: rgba (150,120,255,0.8);
+    padding: 50px;
+}
+
+grid {
+    background-color: rgba(60,30,100,0.3);
+    border-radius: 20px;
+    padding: 10px;
+    /* box-shadow: 0 0 50px rgba(170,130,255,0.7); */
+    /* e.g. for common background to all buttons */
+}

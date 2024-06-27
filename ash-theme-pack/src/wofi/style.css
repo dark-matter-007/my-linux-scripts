@@ -1,0 +1,92 @@
+/*
+scheme: "Nord"
+author: "arcticicestudio"
+*/
+
+@define-color base10 #2E3440;
+@define-color base00 #3B4252;
+@define-color base02 #434C5E;
+@define-color base03 #4C566A;
+@define-color base04 #D8DEE9;
+@define-color base05 #E5E9F0;
+@define-color base06 #ECEFF4;
+@define-color base07 #8FBCBB;
+@define-color base08 #88C0D0;
+@define-color base09 #81A1C1;
+@define-color base0A #5E81AC;
+@define-color base0B #BF616A;
+@define-color base0C #D08770;
+@define-color base0D #EBCB8B;
+@define-color base0E #A3BE8C;
+@define-color base0F #B48EAD;
+
+#entry {
+border-radius: 10px;
+padding: 5px 2px 5px 2px;
+margin: 0px 6px 0px 6px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#entry:selected {
+color: @base0D;
+background-color: rgba (200,170,255,0.1);
+padding: 12px;
+}
+ 
+#text:selected {
+color: @base04;
+}
+ 
+#window {
+animation-name: fadeIn;
+animation-duration: 0.6s;
+background-color: transparent;
+font-family: Ubuntu Mono;
+/* font-size:14; */
+}
+
+#input {
+border: none;
+background-color: rgba (170,130,255,0.2);
+border-radius: 10px;
+margin: 4px 4px 8px 4px;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+padding: 8px;
+font-family: sans;
+}
+
+#inner-box {
+color: rgba (255,255,255,0.5);
+border-radius: 20px;
+margin-left: 10px;
+margin-right: 10px;
+/* margin-right: 180px; */ 
+}
+
+#outer-box {
+background-color: rgba (5,0,20,0.7);
+border-radius: 20px;
+padding: 0px;
+box-shadow: 0px 0px 3px 1px  #0F0F0F;
+}
+
+#scroll {
+}
+
+#text {
+color: @base04;
+font-family: sans;
+background-color: transparent;
+margin: 0px 0px 0px 10px;
+} 
+
+#img {
+  background-color: transparent;
+margin-left: 5px;
+}

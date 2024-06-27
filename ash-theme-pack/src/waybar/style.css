@@ -1,0 +1,201 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+ 
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+
+/*
+Polar Night
+nord0  #2e3440
+nord1  #3b4252
+nord2  #434c5e
+nord3  #4c566a
+Snow Storm
+nord4  #d8dee9
+nord5  #e5e9f0
+nord6  #eceff4
+Frost
+nord7  #8fbcbb
+nord8  #88c0d0
+nord9  #81a1c1
+nord10 #5e81ac
+Aurora
+nord11 #bf616a
+nord12 #d08770
+nord13 #ebcb8b
+nord14 #a3be8c
+nord15 #b48ead
+*/
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+ 
+/* Reset all styles */
+
+* {
+    color: #eeccff;
+    border: 0;
+    border-radius: 15;
+    padding: 0 0;
+    font-family:Symbols Nerd Font Mono;
+    font-size: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-bottom:2px;
+   }
+
+window#waybar {
+    background:rgba (0, 0, 0, 0.5);
+    border-radius: 0px 0px 20px 20px; 
+}
+
+#workspaces button {
+    padding: 0px 0px;
+    border: 2px;
+    margin-bottom: 2px;
+    border-radius: 13px;
+    color: #aa88ff;
+    background-color: rgba ( 255,255,255,0.1);
+    border-color: rgba ( 0, 0, 0, 0 );
+    border-style: solid;
+    margin-top: 5px;
+}
+
+#workspaces button.active {
+    border-color: #8855ff;
+    background-color: rgba ( 255, 255, 255, 0.2 );
+}
+
+#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather{
+    padding: 0px 7px;
+    border-bottom: 0px;
+    border-top: 0px;
+    color: #aa99ff;
+    border-radius: 50px;
+    border-style: solid;
+}
+ 
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+ 
+#clock {
+ color:#ffffff;
+}
+
+#backlight {
+    color: #aa99ff;
+}
+
+#battery {
+    color: #aa99ff;
+}
+
+#battery.charging {
+    color: #aaffaa;
+    background: rgba(170, 255, 200, 0.2);
+}
+
+@keyframes blink {
+    to {
+        color: rgba ( 255, 200, 200, 1);
+        background-color: rgba ( 255, 100, 100, 0.6);
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: rgba ( 255, 100, 100, 0.1);
+    color: #eceff4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning:not(.charging) {
+    background: rgba ( 255, 100, 100, 0.3 );
+    color: #ff8888;
+}
+
+#cpu {
+    color:#aa88ff ;
+    margin-top: 5px;
+}
+
+#memory {
+    color: #aa88ff;
+}
+
+#network.disabled {
+    color:#bf616a;
+}
+
+#network{
+    color:#aa88ff;
+}
+
+#network.disconnected {
+    color: #bf616a;
+}
+
+#pulseaudio {
+    color: #aa88ff;
+}
+
+#pulseaudio.muted {
+    color: #3b4252;
+}
+
+#temperature {
+    color: #8fbcbb;
+}
+
+#temperature.critical {
+    color: #bf616a;
+}
+
+#idle_inhibitor {
+   color: #aa99ff;
+}
+
+#tray {
+    border-radius: 2px;
+}
+
+#custom-launcher{
+        font-size: 20px;
+        background-image: url('/home/eagleofhell/.config/waybar/launcher.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-style: hidden;
+}
+
+#custom-power{
+    border-style: hidden;
+    margin-top:2px;
+    color: #aa88ff;    
+}
+
+#window{
+    border-style: solid;
+    margin-top:3px;  
+}    
+#custom-keyboard-layout{
+   color:#aa99ff;
+}   
+#custom-network_traffic{
+   color:#aa99ff;
+}
+
+
