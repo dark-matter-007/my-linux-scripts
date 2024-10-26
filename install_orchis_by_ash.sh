@@ -14,7 +14,7 @@ clear;
 echo -e -n "${purple_text}Have you installed Orchis theme earlier? : ${white_text}"
 read install_check
 
-if [ "$install_check" != "y" ]; 
+if [ "$install_check" != "y" ];
 then
 cp -r ./Orchis-theme ~/Themes/Orchis-theme;
 echo -e "${white_text}Installed Orchis theme to your Themes folder :)"
@@ -41,9 +41,20 @@ read tweaks_name;
 echo -e -n "${purple_text}Link to LibAdwaita (gtk4)? \033[34m[y/n] : ";
 read gtk4_link;
 
-if [ "$gtk4_link" = "y" ]; 
+if [ "$gtk4_link" = "y" ];
 then
-./install.sh -t $accent_name -c $theme_name --tweaks $tweaks_name -l;
+./install.sh -t $accent_name -c $theme_name --tweaks $tweaks_name --size standard -l;
 else
-./install.sh -t $accent_name -c $theme_name  --tweaks $tweaks_name;
+./install.sh -t $accent_name -c $theme_name  --tweaks $tweaks_name --size standard;
+fi;
+
+echo -e -n "\n\n${purple_text}Also install wallpapers in ~/Pictures directory? [y/n]: ${white_text}"
+read copy_WPs
+
+if [ "$copy_WPs" == "y" ];
+then
+cp -r ./wallpapers ~/Pictures/ASH_THEME_Wallpapers
+echo -e -n "${green_text}Copied Wallpapers..."
+else
+echo -e -n "${red_text}Cancelled Wallpaper Installation...${white_text}"
 fi;
