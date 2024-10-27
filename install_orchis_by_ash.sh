@@ -14,6 +14,7 @@ read install_check
 
 if [ "$install_check" != "y" ]; then
     if [[ ! -d "~/Themes/Orchis-theme" ]]; then
+        mkdir ~/Themes && mkdir ~/Themes/Orchis-theme
         cp -r ./Orchis-theme ~/Themes/Orchis-theme
         echo -e "${white_text}Installed Orchis theme to your Themes folder :)"
     else
